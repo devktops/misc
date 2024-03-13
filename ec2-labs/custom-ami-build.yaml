@@ -1,0 +1,11 @@
+name: Amazon Linux Boto3
+description: Build Amazon Linux Machine with Boto3.
+schemaVersion: 1.0
+phases:
+  - name: build
+    steps:
+      - name: InstallBoto
+        action: ExecuteBash
+        inputs:
+          commands:
+            - 'sudo yum install python-boto3 -y'
